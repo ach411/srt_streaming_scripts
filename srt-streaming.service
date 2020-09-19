@@ -1,0 +1,13 @@
+[Unit]
+Description=Start SRT Streaming
+After=network.target
+
+[Service]
+Type=simple
+User=srt
+Restart=always
+ExecStart=/home/srt/srt_daemon.sh 
+
+[Install]
+WantedBy=multi-user.target
+
